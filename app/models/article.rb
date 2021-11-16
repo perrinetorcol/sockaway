@@ -1,4 +1,4 @@
 class Article < ApplicationRecord
   has_many_attached :photos
-  belongs_to :user
+  belongs_to :user, dependent: :destroy
 end
