@@ -10,3 +10,15 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.btn-outline-success {
+  border-radius: 4px;
+  border: 1px solid #5271ff;
+  color: #5271ff;
+}
+
+.btn-outline-success:hover {
+  background-color: #3156fc;
+  color: white;
+  border: 1px solid #3156fc;
+}

@@ -1,0 +1,37 @@
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #5172ff;
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px #001D4A;
+  font-size: 26px;
+  font-weight: bold;
+  padding-left: 30px;
+  padding-top: 15px;
+}
+
+.banner p {
+  font-size: 16px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px #001D4A;
+  padding-left: 30px;
+  padding-top: 15px;
+}
+
+.banner a {
+  margin-left: 30px;
+}
+
+.d-block {
+  width: 100vh;
+  padding: 15px;
+}

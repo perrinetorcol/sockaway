@@ -1,0 +1,14 @@
+
+.btn-flat {
+  color: rgba(255, 255, 255, 0.8);
+  background: #ECA400;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: normal;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-flat:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px #ECA400;
+}
