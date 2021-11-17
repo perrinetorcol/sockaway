@@ -15,7 +15,9 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.create(article_params)
+    @article.user = current_user
     @article.save
+    authorize @article
     redirect_to articles_path
   end
 
