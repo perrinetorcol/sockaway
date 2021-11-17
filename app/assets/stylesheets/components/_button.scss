@@ -1,6 +1,7 @@
-
 .btn-flat {
-  color: rgba(255, 255, 255, 0.8);
+  a {
+    color: rgba(255, 255, 255, 0.8);
+  }
   background: #ECA400;
   padding: 8px 24px;
   border-radius: 4px;
@@ -9,6 +10,10 @@
 }
 
 .btn-flat:hover {
-  color: rgba(255, 255, 255, 1);
+
+  a {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+  }
   box-shadow: 0 5px 15px #ECA400;
 }
