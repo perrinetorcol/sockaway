@@ -40,17 +40,34 @@
 </div>
 
 <%# fin de la navbar et searchbar %>
+<div class="form-container">
+  <h1>Vendre un nouvel article</h1>
+  <div class="form-new">
+    <%= simple_form_for @article do |f| %>
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :price %>
+      <%= f.input :category, collection: Article::CATEGORY %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+      <div class="btn btn-flat"><%= link_to "CREER", articles_path %><%= f.button :submit, '' %></div>
+    <% end %>
+  </div>
 
-<h1>Vendre un nouvel article</h1>
+  <%= link_to "Retour à la liste d'articles", articles_path %>
+  <%= link_to "Retour à la page d'accueil", root_path %>
+</div>
 
-<%= simple_form_for @article do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.input :category, collection: Article::CATEGORY %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  <%= f.button :submit, class: "btn btn-primary"%>
-<% end %>
+<%# footer ci-dessous : %>
 
-<%= link_to "Back to the list", articles_path %>
-<%= link_to "Back to homepage", root_path %>
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+  <div class="footer-copyright">
+    @2021 - Copyright - Tous droits réservés <br> Créé par Sock Away avec <i class="fas fa-heart"></i>
+  </div>
+</div>
+
+<%# fin du footer %>
