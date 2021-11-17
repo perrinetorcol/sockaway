@@ -8,14 +8,23 @@
   background-color: #5172ff;
 }
 
+.banner-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30px;
+  flex-direction: column;
+  width: 800px;
+  text-align: center;
+}
+
 .banner h1 {
   margin: 0;
   color: white;
   text-shadow: 1px 1px 3px #001D4A;
   font-size: 26px;
   font-weight: bold;
-  padding-left: 30px;
-  padding-top: 15px;
+  padding: 15px;
 }
 
 .banner p {
@@ -23,15 +32,14 @@
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px #001D4A;
-  padding-left: 30px;
-  padding-top: 15px;
-}
-
-.banner a {
-  margin-left: 30px;
+  padding: 15px;
 }
 
 .d-block {
   width: 100vh;
   padding: 15px;
+}
+
+.carousel {
+  width: 100vh;
 }
