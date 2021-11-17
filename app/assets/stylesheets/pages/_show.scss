@@ -1,0 +1,29 @@
+body {
+  background-color: #fef9ff;
+}
+.container-show {
+  margin: 80px 80px;
+}
+.description-show {
+  padding: 24px;
+}
+.prix-show {
+  padding: 24px;
+}
+.category-show {
+  color: #ECA400;
+  font-size: bold;
+  padding: 24px;
+}
+.article-name-show {
+  padding: 24px;
+}
+.link-show {
+  margin-top: 48px;
+}
+.details-show {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
