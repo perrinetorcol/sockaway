@@ -1,0 +1,96 @@
+<%# Navbar et searchbar ci-dessous :  %>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <a class="navbar-brand" href="#">
+    <%= image_tag "sockaway.png", alt: "Logo Sock Away" %>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</div>
+
+<div class="container-show">
+  <%# Grande div qui enveloppe carousel + description : %>
+  <div class="d-flex justify-content-between align-items-center">
+    <%# Carousel photos %>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="d-block">
+            <% if @article.photos.attached? %>
+              <%= cl_image_tag @article.photos.first.key, height: 300, width: 500, crop: :fill %>
+            <% else %>
+              <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" class="d-block w-100" alt="Pas de photos pour cet article" />
+            <% end %>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-block">
+            <% if @article.photos.attached? %>
+              <%= cl_image_tag @article.photos.first.key, height: 300, width: 500, crop: :fill %>
+            <% else %>
+              <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" class="d-block w-100" alt="Pas de photos pour cet article" />
+            <% end %>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="d-block">
+            <% if @article.photos.attached? %>
+              <%= cl_image_tag @article.photos.first.key, height: 300, width: 500, crop: :fill %>
+            <% else %>
+              <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" class="d-block w-100" alt="Pas de photos pour cet article" />
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </button>
+    </div>
+    <%# Fin de Carousel photos %>
+    <%# Description et prix de l'article ci-dessous : %>
+    <div class="details-show">
+      <div class="category-show">
+        <h1><%= @article.category %></h1>
+      </div>
+      <div class="article-name-show">
+        <h2> <%= @article.name %></h2>
+      </div>
+      <div class="description-show">
+        <p><%= @article.description %></p>
+      </div>
+      <div class="prix-show">
+        <p>
+          <strong>Prix:</strong>
+          <%= @article.price %> €
+        </p>
+      </div>
+    </div>
+    <%#  fin Description et prix de l'article ci-dessous : %>
+  </div>
+  <div class="link-show">
+    <%= link_to 'Retour à la liste des articles', articles_path(@articles), class: "btn btn-gradient" %>
+    <%= link_to 'Réserver cet article', root_path(@article), class: "btn btn-gradient" %>
+  </div>
+</div>
+<%# footer ci-dessous : %>
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+  <div class="footer-copyright">
+    @2021 - Copyright - Tous droits réservés <br> Créé par Sock Away avec <i class="fas fa-heart"></i>
+  </div>
+</div>
+<%# fin du footer %>
