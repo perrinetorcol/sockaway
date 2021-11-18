@@ -1,7 +1,8 @@
 
+<%# Grande div qui enveloppe carousel + description : %>
 <div class="container-show">
-  <%# Grande div qui enveloppe carousel + description : %>
-  <div class="d-flex justify-content-between align-items-center">
+
+  <div class="card-show">
     <%# Carousel photos %>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -49,7 +50,7 @@
     </div>
     <%# Fin de Carousel photos %>
     <%# Description et prix de l'article ci-dessous : %>
-    <div class="details-show">
+    <div class="card-details-show">
       <div class="category-show">
         <h1><%= @article.category %></h1>
       </div>
@@ -68,7 +69,7 @@
     </div>
     <%#  fin Description et prix de l'article ci-dessous : %>
   </div>
-  <div class="link-show">
+  <div class="card-link-show">
     <%= link_to 'Retour à la liste des articles', articles_path(@articles), class: "btn btn-gradient" %>
     <%= link_to 'Réserver cet article', root_path(@article), class: "btn btn-gradient" %>
   </div>
