@@ -2,13 +2,8 @@ body {
   background-color: #fef9ff;
 }
 .container-show {
-  margin: 80px 80px;
-}
-.description-show {
-  padding: 24px;
-}
-.prix-show {
-  padding: 24px;
+  margin: 40px;
+  min-height: 85vh;
 }
 .category-show {
   color: #ECA400;
@@ -18,12 +13,26 @@ body {
 .article-name-show {
   padding: 24px;
 }
-.link-show {
-  margin-top: 48px;
+.description-show {
+  padding: 24px;
 }
-.details-show {
+.prix-show {
+  padding: 24px;
+}
+.card-link-show {
+  margin: 36px;
+  display: flex;
+  justify-content: flex-end;
+}
+.card-details-show {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 8px;
+  margin: 0 56px;
+}
+.card-show {
+  display:flex;
+  justify-content: space-between;
 }
