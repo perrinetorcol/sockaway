@@ -1,6 +1,10 @@
 class ArticlesController < ApplicationController
   def index
-    @articles = policy_scope(Article).order(created_at: :desc)
+    if params[:query] && params[:query] != ""
+      @articles = policy_scope(Article).search_by_article(params[:query])
+    else
+      @articles = policy_scope(Article).order(created_at: :desc)
+    end
   end
 
   def show
