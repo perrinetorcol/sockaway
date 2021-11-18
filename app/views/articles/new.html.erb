@@ -1,45 +1,4 @@
-<%# Navbar et searchbar ci-dessous :  %>
 
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <a class="navbar-brand" href="#">
-    <%= image_tag "sockaway.png", alt: "Logo Sock Away" %>
-
-</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-<%# searchbar :  %>
-<nav class="navbar navbar-light">
-  <div class="container-fluid">
-    <form class="d-flex">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
-<%# fin de la searchbar %>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Messages</a>
-      </li>
-      <li class="nav-item dropdown">
-        <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/articles/new">Ajouter un article</a>
-          <a class="dropdown-item" href="#">Se déconnecter</a>
-        </div>
-      </li>
-    </ul>
-  </div>
-</div>
-
-<%# fin de la navbar et searchbar %>
 <div class="form-container">
   <h1>Vendre un nouvel article</h1>
   <div class="form-new">
@@ -56,18 +15,3 @@
   <%= link_to "Retour à la liste d'articles", articles_path %>
   <%= link_to "Retour à la page d'accueil", root_path %>
 </div>
-
-<%# footer ci-dessous : %>
-
-<div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-  </div>
-  <div class="footer-copyright">
-    @2021 - Copyright - Tous droits réservés <br> Créé par Sock Away avec <i class="fas fa-heart"></i>
-  </div>
-</div>
-
-<%# fin du footer %>

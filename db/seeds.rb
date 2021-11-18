@@ -12,13 +12,13 @@ User.destroy_all
 Article.destroy_all
 
 puts 'Creating 3 fake users...'
-user = User.create(email: 'lauriane@wagon.com', password: 'secret')
+user = User.create!(email: 'lauriane@wagon.com', password: 'secret')
 user.photo.attach(io: URI.open('https://thispersondoesnotexist.com/image'), filename: 'file.png', content_type: 'image/png')
 user.save!
-user = User.create(email: 'perrine@wagon.com', password: 'azerty')
+user = User.create!(email: 'perrine@wagon.com', password: 'azerty')
 user.photo.attach(io: URI.open('https://thispersondoesnotexist.com/image'), filename: 'file.png', content_type: 'image/png')
 user.save!
-user = User.create(email: 'ahmed@wagon.com', password: '123456')
+user = User.create!(email: 'ahmed@wagon.com', password: '123456')
 user.photo.attach(io: URI.open('https://thispersondoesnotexist.com/image'), filename: 'file.png', content_type: 'image/png')
 user.save!
 
