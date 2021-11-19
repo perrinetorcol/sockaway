@@ -1,12 +1,13 @@
 .container-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
   min-height: 80vh;
   margin: 4rem 5vw;
-  grid-row-gap: 40px;
 }
 
+.grid-product {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 40px;
+}
 
 :root {
   --surface-color: #fff;
@@ -35,7 +36,6 @@ body {
 .card {
   position: relative;
   display: block;
-  height: 100%;
   width: 400px;
   border-radius: calc(var(--curve) * 1px);
   overflow: hidden;
