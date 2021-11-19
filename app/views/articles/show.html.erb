@@ -70,18 +70,14 @@
     <%#  fin Description et prix de l'article ci-dessous : %>
   </div>
   <div class="card-link-show">
-    <% if policy(@article).destroy? %>
-      <%= link_to "Supprimer cet article",
-                      article_path(@article),
-                      method: :delete,
-                      data: { confirm: "êtes vous sûr(e) de vouloir supprimer cet article?" } %>
-    <% end %>
-
-
     <%= link_to 'Retour à la liste des articles', articles_path(@articles), class: "btn btn-gradient" %>
-    <%= link_to 'Réserver cet article', root_path(@article), class: "btn btn-gradient" %>
+    <% unless current_user.id == @article.user_id %>
+      <%= link_to 'Réserver cet article', root_path(@article), class: "btn btn-gradient" %>
+    <% end %>
+    <% if policy(@article).destroy? %>
      <%= link_to 'Supprimer cet article', article_path(@article), class: "btn btn-gradient",
           method: :delete,
-          data: { confirm: 'êtes-vous sûr?' } %>
+          data: { confirm: "êtes vous sûr(e) de vouloir supprimer cet article?" } %>
+    <% end %>
   </div>
 </div>
