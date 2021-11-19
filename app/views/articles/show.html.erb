@@ -16,25 +16,25 @@
             <% if @article.photos.attached? %>
               <%= cl_image_tag @article.photos.first.key, height: 300, width: 500, crop: :fill %>
             <% else %>
-              <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" class="d-block w-100" alt="Pas de photos pour cet article" />
+              <img src="https://images.unsplash.com/photo-1509067917181-3ec8d8ef5170?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGRyZXNzaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" class="d-block w-100" alt="Pas de photos pour cet article" />
             <% end %>
           </div>
         </div>
         <div class="carousel-item">
           <div class="d-block">
-            <% if @article.photos.attached? %>
-              <%= cl_image_tag @article.photos.first.key, height: 300, width: 500, crop: :fill %>
+            <% if @article.photos.attached? && @article.photos.second %>
+              <%= cl_image_tag @article.photos.second.key, height: 300, width: 500, crop: :fill %>
             <% else %>
-              <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" class="d-block w-100" alt="Pas de photos pour cet article" />
+              <img src="https://images.unsplash.com/photo-1509067917181-3ec8d8ef5170?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGRyZXNzaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" class="d-block w-100" alt="Pas de photos pour cet article" />
             <% end %>
           </div>
         </div>
         <div class="carousel-item">
           <div class="d-block">
-            <% if @article.photos.attached? %>
-              <%= cl_image_tag @article.photos.first.key, height: 300, width: 500, crop: :fill %>
+            <% if @article.photos.attached? && @article.photos.second %>
+              <%= cl_image_tag @article.photos.third.key, height: 300, width: 500, crop: :fill %>
             <% else %>
-              <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" class="d-block w-100" alt="Pas de photos pour cet article" />
+              <img src="https://images.unsplash.com/photo-1509067917181-3ec8d8ef5170?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGRyZXNzaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" class="d-block w-100" alt="Pas de photos pour cet article" />
             <% end %>
           </div>
         </div>
