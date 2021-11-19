@@ -1,12 +1,12 @@
 <div class="container">
   <div class="row justify-content-center align-items-center">
     <div class="col-xs-12 col-sm-8 col-md-6">
-      <div class="form-container">
         <h1>Vendre un nouvel article</h1>
+      <div class="form-container">
         <div class="form-new">
           <%= simple_form_for @article do |f| %>
           <div class="col-12">
-            <%= f.input :name, label: "Nom de l'article", placeholder: 'Robe de mariée' %>
+            <%= f.input :name, label: "Nom de l'article", placeholder: 'Veste en cuir' %>
           </div>
           <div class="col-12">
             <%= f.input :description, label: "Description", placeholder: "Neuve, n'a jamais servie" %>
@@ -15,13 +15,13 @@
             <%= f.input :price, label: "Prix", placeholder: "15" %>
           </div>
           <div class="col-6">
-            <%= f.input :category, label: "Catégorie", placeholder: "ROBE", collection: Article::CATEGORY %>
+            <%= f.input :category, label: "Catégorie", placeholder: "VESTE", collection: Article::CATEGORY %>
           </div>
           <div class="col-12">
             <%= f.input :photos, as: :file, input_html: { multiple: true }, label: "Photo(s)", placeholder: "Sélectionner" %>
           </div>
           <div class="col-12">
-            <div class="btn btn-flat"><%= f.button :submit, placeholder: "CREER" %></div>
+            <%= f.button :submit, "CREER", class: "btn btn-flat" %>
           </div>
           <% end %>
         </div>
