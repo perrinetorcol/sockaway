@@ -26,10 +26,12 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    @user = authorize User.find(params[:id])
     @article = Article.find(params[:id])
+    authorize @article
     @article.destroy
-    redirect_to dressing_path
+    respond_to do |format|
+      format.html { redirect_to articles_url notice: 'Article was successfully deleted.' }
+    end
   end
 
   private
