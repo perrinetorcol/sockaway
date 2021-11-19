@@ -12,4 +12,8 @@ class ArticlePolicy < ApplicationPolicy
   def create?
     true
   end
+
+  def profil?
+    record.first.user = user
+  end
 end

@@ -71,6 +71,6 @@
   </div>
   <div class="card-link-show">
     <%= link_to 'Retour à la liste des articles', articles_path(@articles), class: "btn btn-gradient" %>
-    <%= link_to 'Réserver cet article', root_path(@article), class: "btn btn-gradient" %>
+    <%= link_to 'Réserver cet article', bookings_create_path(@article), class: "btn btn-gradient" %>
   </div>
 </div>
