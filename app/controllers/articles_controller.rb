@@ -22,7 +22,7 @@ class ArticlesController < ApplicationController
     @article.user = current_user
     @article.save
     authorize @article
-    redirect_to articles_path
+    redirect_to article_path(@article)
   end
 
   def destroy
