@@ -72,5 +72,8 @@
   <div class="card-link-show">
     <%= link_to 'Retour à la liste des articles', articles_path(@articles), class: "btn btn-gradient" %>
     <%= link_to 'Réserver cet article', root_path(@article), class: "btn btn-gradient" %>
+     <%= link_to 'Supprimer cet article', article_path(@article), class: "btn btn-gradient",
+          method: :delete,
+          data: { confirm: 'êtes-vous sûr?' } %>
   </div>
 </div>
