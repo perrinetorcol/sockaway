@@ -15,6 +15,7 @@ class ArticlePolicy < ApplicationPolicy
 
   def profil?
     record.first.user = user
+  end
 
   def destroy?
     record.user == user
