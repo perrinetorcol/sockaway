@@ -36,7 +36,7 @@
        <% end %>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
           <%= link_to "Ajouter un article", new_article_path, class: "dropdown-item" %>
-          <%= link_to "Mon dressing", "#", class: "dropdown-item" %>
+          <%= link_to "Mon dressing", dashboard_path, class: "dropdown-item" %>
           <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
         </div>
       <% else %>
