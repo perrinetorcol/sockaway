@@ -1,15 +1,11 @@
 class BookingsController < ApplicationController
   def create
-    @booking = Booking.new(booking_params)
+    @booking = Booking.new
     @article = Article.find(params[:article_id])
     @booking.article = @article
+    @booking.user = current_user
     @booking.save
-    redirect_to article_path(@article)
-  end
-
-  private
-
-  def booking_params
-    params.require(:booking).permit(:content)
+    authorize @booking
+    redirect_to dashboard_path
   end
 end
