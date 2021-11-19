@@ -71,7 +71,9 @@
   </div>
   <div class="card-link-show">
     <%= link_to 'Retour à la liste des articles', articles_path(@articles), class: "btn btn-gradient" %>
-    <%= link_to 'Réserver cet article', root_path(@article), class: "btn btn-gradient" %>
+    <% unless current_user.id == @article.user_id %>
+      <%= link_to 'Réserver cet article', root_path(@article), class: "btn btn-gradient" %>
+    <% end %>
     <% if policy(@article).destroy? %>
      <%= link_to 'Supprimer cet article', article_path(@article), class: "btn btn-gradient",
           method: :delete,
